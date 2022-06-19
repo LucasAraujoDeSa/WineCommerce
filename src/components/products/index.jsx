@@ -6,12 +6,13 @@ export const Products = ({data}) => {
     <StyledProducts>
       <ProductsContainer>
         {
-          data && data.map(({title, price, image ,id}) => {
+          data && data.map(({title, price, image, rate, id}) => {
               return (
                 <Card 
                   title={title} 
                   price={price} 
                   image={image} 
+		  rate={rate}
                   key={id}
                 />
               )

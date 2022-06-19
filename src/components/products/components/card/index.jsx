@@ -3,14 +3,28 @@ import {
   InfoContainer, 
   Button, 
   CardContentContainer, 
-  ImageContainer 
+  ImageContainer,
+  HeaderContainer
 } from './style'
 import Image from 'next/image'
+import { FaStar } from 'react-icons/fa'
 
-export const Card = ({title, price, image}) => {
+export const Card = ({title, price, image, rate}) => {
   return (
     <StyledCard>
       <CardContentContainer>
+        <HeaderContainer>
+          {
+            [...Array(rate)].map(() => {
+              return <FaStar className='star-active'/>
+            })
+          }
+          {
+            [...Array(5 - rate)].map(() => {
+              return <FaStar className='star'/>
+            })
+          }
+        </HeaderContainer>
         <ImageContainer>
           {
             image ?

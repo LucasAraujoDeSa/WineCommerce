@@ -6,7 +6,13 @@ export const StyledCard = styled.section`
   text-align: center;
   margin: 8px;
   padding: 10px;
-  border-radius: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  :hover {
+    box-shadow: 0px 0px 8px 6px #CCCCCC;
+    padding: 11px;
+  }
 `;
 
 export const CardContentContainer = styled.section`
@@ -41,6 +47,7 @@ export const Button = styled.button`
   font-weight: bold;
   color: ${({theme}) => theme.colors.primary};
   background: linear-gradient(90deg, rgba(2,0,36,1) 25%, rgba(11,5,48,1) 38%, rgba(48,24,99,1) 80%);
+  cursor: pointer;
 
   :hover {
     border: 2px solid rgba(2,0,36,1);
@@ -52,4 +59,20 @@ export const Button = styled.button`
 
 export const ImageContainer = styled.section`
   margin: 10px;
+`;
+
+export const HeaderContainer = styled.header`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  .star {
+    color: #fff;
+  }
+
+  .star-active {
+    color: #e88409;
+  }
 `;
